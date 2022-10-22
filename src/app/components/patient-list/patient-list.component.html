@@ -1,0 +1,58 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+               
+                    <button class="aut-btn-submit btn-primary" (click)="addPatient()">AddPatient</button>
+                
+               
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>DoctorId</th>
+                    </tr>
+            
+                    
+                </thead>
+                <tr >
+                    <td>12</td>
+                    <td>Kanchan</td>
+                    <td>Mumbai</td>
+                    <td>34</td>
+                    <td>Female</td>
+                    <td>106</td>
+                </tr>
+                <tr *ngFor="let tempPatient of patients">
+                    <td>{{tempPatient.id}}</td>
+                    <td>{{tempPatient.pname}}</td>
+                    <td>{{tempPatient.address}}</td>
+                    <td>{{tempPatient.age}}</td>
+                    <td>{{tempPatient.gender}}</td>
+                    <td>{{tempPatient.doctorid}}</td>
+                   <td>
+                        <button type="button" class="btn btn-md btn-info" (click) = "updatePatient(tempPatient.id)">Update</button>
+                        &nbsp; &nbsp;
+                        <button type="button" class="btn btn-md btn-danger"  (click) = "deletePatient(tempPatient.id)">Delete </button>
+    
+                       </td>
+                  </tr>
+                  <tr>
+                  
+
+                  </tr>
+            </table>
+            
+            </div>
+           
+            
+
+        </div>
+    
+ </div>
+ </div>

@@ -1,0 +1,14 @@
+<aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+        <a href="#">
+            <img src="assets/images/logo.jpg" alt="+Hospital" class="img-responsive" width ="70px;">
+        </a>
+    </div>
+    <div class="menu-sidebar-content js-scrollbar1">
+        <nav class="navbar-sidebar">
+            <ul class="list-unstyled navbar-list" *ngFor ="let d of doctor">
+                <li><a routerLink="/patients/{{d.id}}" >{{d.speciality}</a></li>
+            </ul>
+        </nav>
+    </div>
+</aside>
